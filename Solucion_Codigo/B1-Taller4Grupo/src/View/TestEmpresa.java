@@ -19,7 +19,7 @@ public class TestEmpresa {
         
         Terreno terrenos[]= {new Terreno(10,5,2),(new Terreno(20,30,2))};
         
-        Empresa emp1 = {new Empresa("Mi lote bonito",personasArray,terrenos)};
+        Empresa emp1 = new Empresa("ruc","nombre","telefono","Mi lote bonito",personasArray,terrenos);
         
         // Presentar solo personas
         for (Persona people : personasArray) {
