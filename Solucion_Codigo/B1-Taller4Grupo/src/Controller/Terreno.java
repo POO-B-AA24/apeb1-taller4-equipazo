@@ -1,26 +1,6 @@
-import java.util.Scanner;
-public class IfTernarioSample {
+package Controller;
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        boolean opc = true;
-        String str = null;
-        while (opc){
-            System.out.println("Dame alto, ancho y vmc:");
-        Terreno tl = new Terreno(in.nextDouble(), in.nextDouble(), in.nextDouble());
-        tl.calcularArea();
-        tl.cacularCostoFinal();
-        System.out.println(tl);
-            System.out.println("Desea vender mas (S/N)");
-            str = in.next();
-            if (str.equalsIgnoreCase("N")){
-                break;
-            }
-        }
-    }
-}
-
-class Terreno {
+public class Terreno {
 
     public double alto, ancho, vmc, area,desc, costoFinal;
     public String mensajeEspecial="Nada especial al momento.";
@@ -57,15 +37,3 @@ class Terreno {
         
     }
 }
-
-// Pal examen parcial: teoria
-/*
-Cuando analizamos un programa, va primero el objeto. Luego la clase (First egg, then chicken)
-Al modelar un programa (UML) primero va la clase, luego el objeto. (First chicken, then egg)
-
-
-MVC
-Modelo: La base de datos 
-Vista: 
-Controlador: Logica del negocio
-*/

@@ -19,10 +19,13 @@ public class Problema2_AplicacionCiclosEjecutor {
             age = in.nextInt();
             System.out.println("Salario: ");
             salary = in.nextDouble();
-
-            Problema2_AplicacionCiclos emp = new Problema2_AplicacionCiclos(name, age, salary);
-            System.out.println(emp);
             
+            Problema2_AplicacionCiclos emp = new Problema2_AplicacionCiclos(name, age, salary);
+            System.out.println(emp.mostrarInformacion());
+            // Promedios y salarios actualizados
+            System.out.println("Cuanto descuento le gustaria otorgar a empleados con sueldo bajo?");
+            emp.setDiscount(in.nextDouble());
+            emp.sumEmpleado(salary,emp.getDiscount());
             System.out.println("Desea Ingresar mas empleados? S/N");
             in.nextLine();
             continuar = in.nextLine();
@@ -33,4 +36,6 @@ public class Problema2_AplicacionCiclosEjecutor {
         } while (sigue);
 
     }
+
+
 }

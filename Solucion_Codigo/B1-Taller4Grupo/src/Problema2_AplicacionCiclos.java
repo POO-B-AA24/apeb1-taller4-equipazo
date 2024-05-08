@@ -1,17 +1,29 @@
 
 public class Problema2_AplicacionCiclos { // Lo mismo que un empleado
-    
+
     String name;
     int age;
     double salary;
+    double discount;
 
     Problema2_AplicacionCiclos(String name, int age, double salary) {
-        this.name =name;
-        this.age =age;
-        this.salary =salary;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public void setDiscount(double disc) {
+        this.discount=disc;
+    }
+    public double getDiscount() {
+        return discount;
     }
     
-        public String toString() { // String Builderaso
+        public void sumEmpleado(double salary, double disc) {
+            double sum= salary++;
+    }
+
+    public String mostrarInformacion() { // String Builderaso
         StringBuilder sb = new StringBuilder();
         sb.append("Empleado{");
         sb.append("name=").append(name);
@@ -21,6 +33,6 @@ public class Problema2_AplicacionCiclos { // Lo mismo que un empleado
         return sb.toString();
     }
 
+
+
 }
-
-
