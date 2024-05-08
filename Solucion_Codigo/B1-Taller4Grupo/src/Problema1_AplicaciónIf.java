@@ -34,8 +34,8 @@ public class Problema1_AplicaciónIf {
         return this.desc;
     }
 
-    public void calcularPrecioFinal(double price, double desc) {
-        this.finalPrice = price-desc;
+    public void calcularPrecioFinal(double price,int quant, double desc) {
+        this.finalPrice = (price*quant)-desc;
         
     }
     
