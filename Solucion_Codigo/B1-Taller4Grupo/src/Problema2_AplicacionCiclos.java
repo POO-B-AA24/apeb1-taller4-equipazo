@@ -1,12 +1,13 @@
 
 public class Problema2_AplicacionCiclos { // Lo mismo que un empleado
 
-    String name;
-    int age;
-    double salary;
-    double raise;
-    double averageSalary;
-    
+    private String name;
+    private int age;
+    private double salary;
+    private double raise;
+    private double sum = 0;
+    private double averageSalary;
+
     Problema2_AplicacionCiclos(String name, int age, double salary) {
         this.name = name;
         this.age = age;
@@ -14,41 +15,50 @@ public class Problema2_AplicacionCiclos { // Lo mismo que un empleado
     }
 
     public void setPayRaise(double raise) {
-        this.raise=raise;
+        if (raise != 0) {
+            this.raise = raise;
+        }
     }
+
     public double getPayRaise() {
         return raise;
     }
-    
-    public void setSalary(double salary){
-        this.salary=salary;
+
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
-    
-        public double sumEmpleado(double salary) {
-            double sum = salary++;
-            return  sum ;
+    public double getSalary() {
+        return salary;
     }
-        
-        public void calcPromedio(double sum, int cont){
-            this.averageSalary = sum/cont;
-            
-        }
-        
-        public double compararSueldo(double salary, double raise){
-        return this.salary += (salary < averageSalary) ?  salary*getPayRaise(): 0; 
-        }
+
+    public double getAverageSalary() {
+        return averageSalary;
+    }
+
+    public void sumEmpleado(double salary) {
+        this.sum += salary;
+
+    }
+
+    public void calcPromedio(double sum, int cont) {
+        this.averageSalary = sum / cont;
+
+    }
+
+    public void compararSueldo(double averageSalary, double raise) {
+        this.salary += (this.salary < averageSalary) ? this.salary * raise / 100 : 0;
+    }
 
     public String mostrarInformacion() { // String Builderaso
         StringBuilder sb = new StringBuilder();
         sb.append("Empleado{");
         sb.append("name=").append(name);
         sb.append(", age=").append(age);
-        sb.append(", aumento= ").append(getPayRaise()).append("%");
+        sb.append(", aumento= ").append(raise).append("%");
         sb.append(", salary=").append(salary);
+        sb.append(", promedio de salarios =").append(averageSalary);
         sb.append('}');
         return sb.toString();
     }
-
-
 
 }
