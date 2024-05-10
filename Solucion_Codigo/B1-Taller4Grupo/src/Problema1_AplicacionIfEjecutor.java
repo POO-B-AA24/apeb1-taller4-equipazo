@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Problema1_AplicaciónIfEjecutor {
+public class Problema1_AplicacionIfEjecutor {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class Problema1_AplicaciónIfEjecutor {
         System.out.println("Ingrese cantidad del producto");
         int quant = in.nextInt();
         
-        Problema1_AplicaciónIf productito = new Problema1_AplicaciónIf(name, price, quant);
+        Problema1_AplicacionIf productito = new Problema1_AplicacionIf(name, price, quant);
         
         productito.calcularDescuento(price, quant);
         productito.calcularPrecioFinal( price, quant, productito.getDiscount());
